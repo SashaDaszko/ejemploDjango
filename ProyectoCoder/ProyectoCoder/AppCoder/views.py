@@ -7,12 +7,17 @@ from django.http import HttpResponse
 
 #Primer vista
 def inicio(request):
-    
+
     #return HttpResponse('Esto es una prueba del inicio')
     return render(request, 'AppCoder/inicio.html')
-
 
 
 def jugadores(request):
 
     return render(request, 'AppCoder/jugadores.html')
+
+
+def equipos(request):
+
+    return render(request, 'AppCoder/equipos.html')
+
