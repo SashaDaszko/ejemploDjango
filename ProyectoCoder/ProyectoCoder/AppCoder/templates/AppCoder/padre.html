@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>PROYECTO PYTHON CODER</title>
+        <title>PROYECTO PYTHON</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,7 +20,6 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
-
 
 
     </head>
@@ -34,17 +33,23 @@
                 <li class="sidebar-brand"><a href="{% url 'Inicio' %}">INICIO MENU</a></li>
                 <li class="sidebar-nav-item"><a href="{% url 'Equipos' %}">Equipos</a></li>
                 <li class="sidebar-nav-item"><a href="{% url 'Jugadores' %}">Jugadores</a></li>
-                <li class="sidebar-nav-item"><a href="">Profesores</a></li>
-                <li class="sidebar-nav-item"><a href="">Estudiantes</a></li>
-                <li class="sidebar-nav-item"><a href="">Entregables</a></li>
+                <li class="sidebar-nav-item"><a href="{% url 'Servicios' %}">Servicios</a></li>
+                <li class="sidebar-nav-item"><a href="{% url 'Estudiantes' %}">Estudiantes</a></li>
+                <li class="sidebar-nav-item"><a href="{% url 'Profesores' %}">Profesores</a></li>
+                <li class="sidebar-nav-item"><a href="{% url 'Entregables' %}">Entregables</a></li>
             </ul>
         </nav>
+
         <!-- Header-->
 
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">DALE QUE VA</h1>
-                <h3 class="mb-5"><em>AHI SE VEN LAS IMAGENES, NO SE VE EL MENU</em></h3>
+
+
+                {% block contenido2 %}
+                {% endblock %}
+
+                <h3 class="mb-5"><em>El menu se ve joya</em></h3>
 
             </div>
         </header>
@@ -80,6 +85,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{% static 'AppCoder /js/scripts.js' %}"></script>
+        <script src="{% static 'AppCoder/js/scripts.js' %}"></script>
     </body>
 </html>

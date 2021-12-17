@@ -10,3 +10,5 @@ admin.site.register(Jugador)
 admin.site.register(Equipo)
 
 admin.site.register(Estadio)
+
+admin.site.register(Empleado)

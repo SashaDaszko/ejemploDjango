@@ -1,0 +1,31 @@
+        {% extends "AppCoder/padre.html" %}
+
+        {% load static %}
+
+
+                {% block contenido2 %}
+                <h1 class="mb-1">JUGADORES DE LA BD!!!</h1>
+                {% endblock %}
+
+
+                {% block contenido %}
+
+                        <!--Aca se pone lo que cambia (dinamico) y lo asociado a esta vista en particular-->
+
+                        {% for j in jugadores %}
+
+                                <li> JUGADOR:  {{ j }}  </li>
+                                <button>
+
+                                        <a href="{% url 'EliminarJugador' j.numero %}">Eliminar</a>
+                                        <a href="{% url 'EditarJugador' j.numero %}">Editar</a>
+
+                                </button>
+
+                        {% endfor %}
+
+                        <a href= ""> AGREGAR OTRO JUGADOR</a>
+
+
+
+                {% endblock %}

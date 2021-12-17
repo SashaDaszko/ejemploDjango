@@ -1,0 +1,31 @@
+        {% extends "AppCoder/padre.html" %}
+
+        {% load static %}
+
+
+                {% block contenido2 %}
+                <h1 class="mb-1">Formulario de EMPLEADO!!!</h1>
+                {% endblock %}
+
+
+                {% block contenido %}
+
+                        {% if miFormulario.errors %}
+
+                        <p>ERRORRRR</p>
+                        {% endif %}
+
+                        <form action="/AppCoder/empleadoFormulario" method="POST">{% csrf_token %}
+
+
+
+                                {{ miFormulario.as_table }}
+
+
+
+                                <input type="submit" value="ENVIOOOO!!">
+
+                        </form>
+
+
+                {% endblock %}

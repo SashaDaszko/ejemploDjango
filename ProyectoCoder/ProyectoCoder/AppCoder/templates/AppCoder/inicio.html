@@ -1,16 +1,22 @@
-
-
-        {% extends 'AppCoder/padre.html' %}
+        {% extends "AppCoder/padre.html" %}
 
         {% load static %}
 
-        {% block contenido %}
+
+                {% block contenido2 %}
+                <h1 class="mb-1">INICIO!!!</h1>
+                {% endblock %}
 
 
-                <h1>Titulo del inicio :)</h1>
+                {% block contenido %}
 
-                <p>Este es el parrafo de inicio</p>
+                        <!--Aca se pone lo que cambia (dinamico) y lo asociado a esta vista en particular-->
+
+                        <h1>ESTE ES EL TITULO DEL INICIO QUE CAMBIO CON EL BLOCK DE CONTENIDO</h1>
+
+                        <p>Esto se heredó de la plantilla padre.html</p>
+
+                        <h3>En el hijo inicio.html, no hay casi nada =)</h3>
 
 
-
-        {% endblock %}
+                {% endblock %}

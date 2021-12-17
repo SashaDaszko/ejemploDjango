@@ -1,0 +1,32 @@
+        {% extends "AppCoder/padre.html" %}
+
+        {% load static %}
+
+
+                {% block contenido2 %}
+                <h1 class="mb-1">Formulario de Estadio!!!</h1>
+                {% endblock %}
+
+
+                {% block contenido %}
+
+                        {% if miFormulario.errors %}
+
+                        <p>ERRORRRR</p>
+
+                        {% endif %}
+
+                        <form action="" method="POST">{% csrf_token %}
+
+                                <table>
+
+                                {{ miFormulario.as_table }}
+
+                                </table>
+
+                                <input type="submit" value="ENVIOOOO!!">
+
+                        </form>
+
+
+                {% endblock %}
